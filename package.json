@@ -24,6 +24,10 @@
       "stage-2"
     ]
   },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "setupTestFrameworkScriptFile":"./browser-mocks.js"
+  },
   "author": "Neha Singh",
   "license": "ISC",
   "devDependencies": {

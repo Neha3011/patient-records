@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render Header: 1`] = `
+<div
+  className="prescription"
+>
+  <table
+    cellPadding="0"
+    cellSpacing="0"
+  >
+    <tbody>
+      <tr
+        className="prescription__row"
+      >
+        <th>
+          Prescription ID
+        </th>
+        <th>
+          Medicine
+        </th>
+        <th>
+          Doctor Request
+        </th>
+        <th>
+          Pharmacist Request
+        </th>
+      </tr>
+      <tr
+        className="prescription__row"
+      >
+        <td>
+          00000001
+        </td>
+        <td>
+          <a
+            onClick={[Function]}
+          >
+            View
+          </a>
+        </td>
+        <td>
+          --
+        </td>
+        <td>
+          --
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

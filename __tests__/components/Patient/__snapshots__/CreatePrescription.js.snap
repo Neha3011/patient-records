@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render Header: 1`] = `
+<div
+  className="patient__actions"
+>
+  <div
+    className="patient__actions__create"
+  >
+    <div
+      className="patient__actions__header"
+    >
+      Add prescription
+    </div>
+    <div
+      className="patient__actions__container"
+    >
+      <div
+        className="patient__actions__create__details"
+      >
+        Name :
+        <input
+          className="patient__actions__create__details__name"
+          onChange={[Function]}
+          placeholder="Enter medicine name here"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        className="patient__actions__create__details"
+      >
+        Quantity :
+        <input
+          className="patient__actions__create__details__qty"
+          onChange={[Function]}
+          placeholder="Qty"
+          type="number"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      className="patient__actions__container"
+    >
+      <div
+        className="patient__actions__create__details"
+      >
+        Name :
+        <input
+          className="patient__actions__create__details__name"
+          onChange={[Function]}
+          placeholder="Enter medicine name here"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        className="patient__actions__create__details"
+      >
+        Quantity :
+        <input
+          className="patient__actions__create__details__qty"
+          onChange={[Function]}
+          placeholder="Qty"
+          type="number"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      className="patient__actions__container"
+    >
+      <div
+        className="patient__actions__create__details"
+      >
+        Name :
+        <input
+          className="patient__actions__create__details__name"
+          onChange={[Function]}
+          placeholder="Enter medicine name here"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        className="patient__actions__create__details"
+      >
+        Quantity :
+        <input
+          className="patient__actions__create__details__qty"
+          onChange={[Function]}
+          placeholder="Qty"
+          type="number"
+          value=""
+        />
+      </div>
+    </div>
+    <button
+      className="patient__actions__submit"
+      onClick={[Function]}
+    >
+      Submit Prescription
+    </button>
+  </div>
+</div>
+`;

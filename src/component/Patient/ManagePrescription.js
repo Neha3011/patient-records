@@ -137,7 +137,7 @@ class ManagePrescription extends React.Component {
                   <tr className="prescription__row" key={prescription.id}>
                     <td>{prescription.id}</td>
                     <td>
-                      <button onClick={this.toggleViewPrescription}>View</button>
+                      <a onClick={this.toggleViewPrescription}>View</a>
                       {(() => {
                         if (this.state.viewPrescription) {
                           return this.renderModal(prescription, prescription.id);
@@ -148,7 +148,7 @@ class ManagePrescription extends React.Component {
                       {(() => {
                         if (prescription.doctorRequested) {
                           return (
-                            <button onClick={this.toggleAllowPrescription.bind(this, 'doctor')}>Allow</button>
+                            <a onClick={this.toggleAllowPrescription.bind(this, 'doctor')}>Allow</a>
                           );
                         } else {
                           return '--';
@@ -164,7 +164,7 @@ class ManagePrescription extends React.Component {
                       {(() => {
                         if (prescription.pharmacistRequested) {
                           return (
-                            <button onClick={this.toggleAllowPrescription.bind(this, 'pharmacist')}>Allow</button>
+                            <a onClick={this.toggleAllowPrescription.bind(this, 'pharmacist')}>Allow</a>
                           );
                         } else {
                           return '--';

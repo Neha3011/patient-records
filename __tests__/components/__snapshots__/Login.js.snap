@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render Header: 1`] = `
+<div
+  className="pharm__login"
+>
+  <a
+    href="#/patient"
+    onClick={[Function]}
+  >
+    <button
+      className="pharm__login__button pharm__login__button--patient"
+    >
+      Login as Patient
+    </button>
+  </a>
+  <a
+    href="#/doctor"
+    onClick={[Function]}
+  >
+    <button
+      className="pharm__login__button pharm__login__button--doctor"
+    >
+      Login as Doctor
+    </button>
+  </a>
+  <a
+    href="#/pharmacist"
+    onClick={[Function]}
+  >
+    <button
+      className="pharm__login__button pharm__login__button--pharmacist"
+    >
+      Login as Pharmacist
+    </button>
+  </a>
+</div>
+`;
