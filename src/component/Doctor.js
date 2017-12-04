@@ -4,6 +4,9 @@ import _ from 'lodash';
 import Popup from './Popup';
 import { setToLocalStorage, getFromLocalStorage } from '../utils/localStorageHelpers';
 
+/**
+ * Describes the Doctor or Pharmacist component
+ * **/
 class Doctor extends React.Component {
   state = {
     'viewPrescription': false,

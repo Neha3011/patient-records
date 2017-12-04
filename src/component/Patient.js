@@ -1,9 +1,12 @@
 import React from 'react';
 import classNames from 'classnames';
 
-
 import CreatePrescription from './Patient/CreatePrescription';
 import ManagePrescription from './Patient/ManagePrescription';
+
+/**
+ * Describes the Patient parent component
+ * **/
 
 class Patient extends React.Component {
   state = {
