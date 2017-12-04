@@ -1,0 +1,309 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0; }
+
+.pharm {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .pharm .pharm__header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 64px;
+    background-color: #0f906d;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 20px; }
+    .pharm .pharm__header img {
+      width: 180px; }
+  .pharm .pharm__login {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 250px;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
+    margin-top: 64px; }
+    .pharm .pharm__login .pharm__login__button {
+      width: 100%;
+      height: 40px;
+      margin: 5px;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 600;
+      border: none;
+      border-radius: 0;
+      cursor: pointer; }
+      .pharm .pharm__login .pharm__login__button--patient {
+        background: #cd201f; }
+      .pharm .pharm__login .pharm__login__button--doctor {
+        background: #0f906d; }
+      .pharm .pharm__login .pharm__login__button--pharmacist {
+        background: #3b5998; }
+  .pharm .patient {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .pharm .patient .patient__header {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-justify-content: space-around;
+          -ms-flex-pack: distribute;
+              justify-content: space-around;
+      padding: 0 20px;
+      height: 54px;
+      -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12);
+              box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12); }
+      .pharm .patient .patient__header .patient__header__nav {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        color: rgba(34, 35, 38, 0.5); }
+        .pharm .patient .patient__header .patient__header__nav:hover, .pharm .patient .patient__header .patient__header__nav--active {
+          cursor: pointer;
+          color: #0f906d;
+          border-bottom: 3px solid #0f906d; }
+    .pharm .patient .patient__actions {
+      padding: 0 20px;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      margin-top: 64px; }
+      .pharm .patient .patient__actions .patient__actions__create {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center; }
+        .pharm .patient .patient__actions .patient__actions__create .patient__actions__header {
+          width: 600px;
+          text-align: center;
+          border-bottom: 1px solid #efefef;
+          height: 34px;
+          color: #222326;
+          text-transform: uppercase; }
+        .pharm .patient .patient__actions .patient__actions__create .patient__actions__container {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex; }
+          .pharm .patient .patient__actions .patient__actions__create .patient__actions__container .patient__actions__create__details {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            margin: 10px;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            padding: 8px; }
+            .pharm .patient .patient__actions .patient__actions__create .patient__actions__container .patient__actions__create__details input {
+              -webkit-box-shadow: none;
+                      box-shadow: none;
+              border-radius: 6px;
+              border: 1px solid #efefef;
+              height: 34px;
+              padding: 6px 12px;
+              font-size: 14px;
+              line-height: 1.42857;
+              color: #222326;
+              margin-left: 20px;
+              width: 200px;
+              outline: none; }
+              .pharm .patient .patient__actions .patient__actions__create .patient__actions__container .patient__actions__create__details input:focus {
+                border-color: #37aeff; }
+            .pharm .patient .patient__actions .patient__actions__create .patient__actions__container .patient__actions__create__details .patient__actions__create__details__qty {
+              width: 50px; }
+        .pharm .patient .patient__actions .patient__actions__create .patient__actions__submit {
+          color: #ffffff;
+          background-color: #1ac27d;
+          border: none;
+          padding: 12px 20px;
+          font-size: 14px;
+          outline: none; }
+          .pharm .patient .patient__actions .patient__actions__create .patient__actions__submit:hover {
+            opacity: 0.9;
+            cursor: pointer; }
+    .pharm .patient .patient__success {
+      width: 500px;
+      color: #ffffff;
+      background-color: #1ac27d;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      padding: 4px;
+      margin-bottom: 20px;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      border-radius: 2px; }
+
+.prescription {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 40px; }
+  .prescription table {
+    border-collapse: collapse; }
+    .prescription table .prescription__row th, .prescription table .prescription__row td {
+      font-size: 12px;
+      border: 1px solid #E6E6E6;
+      width: 160px;
+      padding: 12px 12px 12px 20px;
+      color: rgba(34, 35, 38, 0.9);
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      text-align: left; }
+    .prescription table .prescription__row td {
+      font-size: 14px; }
+      .prescription table .prescription__row td a {
+        color: #2AA3EF;
+        cursor: pointer; }
+    .prescription table .prescription__row th {
+      font-weight: bold;
+      text-transform: uppercase; }
+
+.popup {
+  padding: 40px; }
+  .popup--prescription {
+    background: white;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .popup--prescription .prescription {
+      margin: 0;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+      .popup--prescription .prescription .popup__close {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: end;
+        -webkit-justify-content: flex-end;
+            -ms-flex-pack: end;
+                justify-content: flex-end; }
+        .popup--prescription .prescription .popup__close button {
+          color: #ffffff;
+          background-color: #1ac27d;
+          border: none;
+          padding: 12px 20px;
+          font-size: 14px;
+          outline: none;
+          margin-top: 20px;
+          width: 100px; }
+          .popup--prescription .prescription .popup__close button:hover {
+            opacity: 0.9;
+            cursor: pointer; }
+  .popup .popup__actions {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+    .popup .popup__actions .popup__action {
+      width: 100px;
+      height: 40px;
+      border-radius: 8px;
+      background-color: #ffffff;
+      border: solid 1px rgba(34, 35, 38, 0.3);
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 0.6px;
+      text-align: center;
+      color: rgba(34, 35, 38, 0.9);
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin: 10px;
+      cursor: pointer; }
+    .popup .popup__actions .btn-green {
+      background-color: #1ac27d;
+      color: #ffffff;
+      border-color: transparent; }
+    .popup .popup__actions .btn-outline {
+      color: rgba(34, 35, 38, 0.9);
+      background-color: #fff;
+      border: 1px solid #C3CCD2; }
+
+/*# sourceMappingURL=bundle.css.map*/
