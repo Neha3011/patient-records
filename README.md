@@ -1,4 +1,4 @@
-#Pharmeasy
+##Pharmeasy
 This is a very basic demo app, to imitate an online medicine purchase system.
 There can be 3 types of users:
 1) Patient: 
@@ -48,6 +48,6 @@ Pharmacist can perform following actions:
 5) git subtree push --prefix dist origin gh-pages
 ```
 
-##TODO
+####TODO
 1) Add validations to the prescription input form
 2) Allow patient to add multiple prescriptions
