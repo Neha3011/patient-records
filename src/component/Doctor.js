@@ -6,13 +6,14 @@ import { setToLocalStorage, getFromLocalStorage } from '../utils/localStorageHel
 
 /**
  * Describes the Doctor or Pharmacist component
- * **/
+ * */
 class Doctor extends React.Component {
   state = {
     'viewPrescription': false,
     'allowPrescriptionModal': false,
     'prescriptions': [],
-    'userType': ''
+    'userType': '',
+    'selectedPrescription': []
   };
 
   componentWillMount() {
@@ -29,15 +30,17 @@ class Doctor extends React.Component {
     });
   };
 
-  toggleViewPrescription = () => {
+  toggleViewPrescription = (selectedPrescription = []) => {
     this.setState({
-      'viewPrescription': !this.state.viewPrescription
+      'viewPrescription': !this.state.viewPrescription,
+      selectedPrescription
     });
   };
 
-  toggleRequestPrescription = () => {
+  toggleRequestPrescription = (selectedPrescription) => {
     this.setState({
-      'allowPrescriptionModal': !this.state.allowPrescriptionModal
+      'allowPrescriptionModal': !this.state.allowPrescriptionModal,
+      selectedPrescription
     });
   };
 
@@ -65,14 +68,14 @@ class Doctor extends React.Component {
     }));
   };
 
-  renderAllowPrescription = (type, prescriptionId) => {
+  renderRequestPrescription = () => {
     return (
       <Popup
         contentLabel="Allow Prescription Confirmation"
         popupType="popup--prescription"
       >
         <div className="popup__header">
-          {`Are you sure, you want to request to access prescription: ${type} ?`}
+          {`Are you sure, you want to request to access prescription: ${this.state.selectedPrescription.id} ?`}
         </div>
 
         <div className="popup__actions">
@@ -84,7 +87,7 @@ class Doctor extends React.Component {
           </span>
           <span
             className="popup__action btn-green"
-            onClick={this.requestPrescription.bind(this, type, prescriptionId)}
+            onClick={this.requestPrescription.bind(this, this.state.selectedPrescription.id)}
           >
             REQUEST
           </span>
@@ -93,7 +96,8 @@ class Doctor extends React.Component {
     );
   };
 
-  renderModal = (prescription, prescriptionId) => {
+  renderModal = () => {
+    const prescription = this.state.selectedPrescription;
     return (
       <Popup
         contentLabel="View Prescription"
@@ -109,7 +113,7 @@ class Doctor extends React.Component {
               {
                 prescription && prescription.medicines.map((data) => {
                   return (
-                    <tr className="prescription__row" key={`${prescriptionId}''${data.name}`}>
+                    <tr className="prescription__row" key={`${prescription.id}''${data.name}`}>
                       <td>{data.name}</td>
                       <td>{data.qty}</td>
                     </tr>
@@ -145,7 +149,7 @@ class Doctor extends React.Component {
                         if ((this.state.userType === 'doctor' && prescription.doctorAllowed)
                             || (this.state.userType === 'pharmacist' && prescription.pharmacistAllowed)) {
                           return (
-                            <a onClick={this.toggleViewPrescription}>View</a>
+                            <a onClick={this.toggleViewPrescription.bind(this, prescription)}>View</a>
                           );
                         } else if ((this.state.userType === 'doctor' && prescription.doctorRequested)
                             || (this.state.userType === 'pharmacist' && prescription.pharmacistRequested)) {
@@ -154,15 +158,15 @@ class Doctor extends React.Component {
                           );
                         } else {
                           return (
-                            <a onClick={this.toggleRequestPrescription}>Request Access</a>
+                            <a onClick={this.toggleRequestPrescription.bind(this, prescription)}>Request Access</a>
                           );
                         }
                       })()}
                       {(() => {
                         if (this.state.viewPrescription) {
-                          return this.renderModal(prescription, prescription.id);
+                          return this.renderModal();
                         } else if (this.state.allowPrescriptionModal) {
-                          return this.renderAllowPrescription(prescription.id);
+                          return this.renderRequestPrescription();
                         }
                       })()}
                     </td>

@@ -3,8 +3,8 @@ This is a very basic demo app, to imitate an online medicine purchase system.
 There can be 3 types of users:
 1) Patient: 
 Patient can perform following actions:
-    a. can add prescriptions. Currently he can add only one prescription with maximum of 3 medicines in it.
-    b. can view prescriptions
+    a. can add prescriptions. Currently he can add prescription with maximum 3 medicines.
+    b. can view prescriptions and see pending actions
     c. can allow pharmacist or doctor to have access to the prescription
 
 2) Doctor:
@@ -47,7 +47,3 @@ Pharmacist can perform following actions:
 4) npm run build:prod
 5) git subtree push --prefix dist origin gh-pages
 ```
-
-####TODO
-1) Add validations to the prescription input form
-2) Allow patient to add multiple prescriptions

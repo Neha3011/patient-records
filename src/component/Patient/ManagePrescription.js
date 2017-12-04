@@ -9,23 +9,26 @@ class ManagePrescription extends React.Component {
     'viewPrescription': false,
     'allowPrescriptionModal': false,
     'userType': '',
-    'prescriptions': []
+    'prescriptions': [],
+    'selectedPrescription': []
   };
 
   componentWillMount() {
     this.fetchPrescriptionData();
   }
 
-  toggleViewPrescription = () => {
+  toggleViewPrescription = (selectedPrescription) => {
     this.setState({
-      'viewPrescription': !this.state.viewPrescription
+      'viewPrescription': !this.state.viewPrescription,
+      selectedPrescription
     });
   };
 
-  toggleAllowPrescription = (userType = '') => {
+  toggleAllowPrescription = (userType = '', selectedPrescription = []) => {
     this.setState({
       'allowPrescriptionModal': !this.state.allowPrescriptionModal,
-      userType
+      userType,
+      selectedPrescription
     });
   };
 
@@ -60,14 +63,14 @@ class ManagePrescription extends React.Component {
     }));
   };
 
-  renderAllowPrescription = (type, prescriptionId) => {
+  renderAllowPrescription = () => {
     return (
       <Popup
         contentLabel="Allow Prescription Confirmation"
         popupType="popup--prescription"
       >
         <div className="popup__header">
-          {`Are you sure, you want to allow ${type} to view your prescription?`}
+          {`Are you sure, you want to allow ${this.state.userType} to view your prescription?`}
         </div>
         <div className="popup__actions">
           <div
@@ -78,7 +81,7 @@ class ManagePrescription extends React.Component {
           </div>
           <div
             className="popup__action btn-green"
-            onClick={this.allowPrescription.bind(this, type, prescriptionId)}
+            onClick={this.allowPrescription.bind(this, this.state.userType, this.state.selectedPrescription.id)}
           >
             ALLOW
           </div>
@@ -87,7 +90,8 @@ class ManagePrescription extends React.Component {
     );
   };
 
-  renderModal = (prescription, prescriptionId) => {
+  renderModal = () => {
+    const prescription = this.state.selectedPrescription;
     return (
       <Popup
         contentLabel="View Prescription"
@@ -103,7 +107,7 @@ class ManagePrescription extends React.Component {
               {
                 prescription && prescription.medicines.map((data) => {
                   return (
-                    <tr className="prescription__row" key={`${prescriptionId}''${data.name}`}>
+                    <tr className="prescription__row" key={`${prescription.id}''${data.name}`}>
                       <td>{data.name}</td>
                       <td>{data.qty}</td>
                     </tr>
@@ -137,10 +141,10 @@ class ManagePrescription extends React.Component {
                   <tr className="prescription__row" key={prescription.id}>
                     <td>{prescription.id}</td>
                     <td>
-                      <a onClick={this.toggleViewPrescription}>View</a>
+                      <a onClick={this.toggleViewPrescription.bind(this, prescription)}>View</a>
                       {(() => {
                         if (this.state.viewPrescription) {
-                          return this.renderModal(prescription, prescription.id);
+                          return this.renderModal();
                         }
                       })()}
                     </td>
@@ -148,15 +152,17 @@ class ManagePrescription extends React.Component {
                       {(() => {
                         if (prescription.doctorRequested) {
                           return (
-                            <a onClick={this.toggleAllowPrescription.bind(this, 'doctor')}>Allow</a>
+                            <a onClick={this.toggleAllowPrescription.bind(this, 'doctor', prescription)}>Allow</a>
                           );
+                        } else if (prescription.doctorAllowed) {
+                          return 'Request Granted';
                         } else {
                           return '--';
                         }
                       })()}
                       {(() => {
                         if (this.state.allowPrescriptionModal) {
-                          return this.renderAllowPrescription(this.state.userType, prescription.id);
+                          return this.renderAllowPrescription();
                         }
                       })()}
                     </td>
@@ -164,8 +170,10 @@ class ManagePrescription extends React.Component {
                       {(() => {
                         if (prescription.pharmacistRequested) {
                           return (
-                            <a onClick={this.toggleAllowPrescription.bind(this, 'pharmacist')}>Allow</a>
+                            <a onClick={this.toggleAllowPrescription.bind(this, 'pharmacist', prescription)}>Allow</a>
                           );
+                        } else if (prescription.pharmacistAllowed) {
+                          return 'Request Granted';
                         } else {
                           return '--';
                         }

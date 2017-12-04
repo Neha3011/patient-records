@@ -2,3 +2,4 @@ node_modules/**
 dist/**
 __tests__
 coverage
+browser-mocks.js

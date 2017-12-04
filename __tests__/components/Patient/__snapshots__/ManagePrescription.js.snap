@@ -42,7 +42,7 @@ exports[`render Header: 1`] = `
           --
         </td>
         <td>
-          --
+          Request Granted
         </td>
       </tr>
     </tbody>

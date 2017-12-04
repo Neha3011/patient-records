@@ -6,7 +6,7 @@ import ManagePrescription from './Patient/ManagePrescription';
 
 /**
  * Describes the Patient parent component
- * **/
+ * */
 
 class Patient extends React.Component {
   state = {

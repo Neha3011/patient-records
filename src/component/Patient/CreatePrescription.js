@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 
-import { normalizerPrescription } from '../../utils/normalizer';
+import { normalizeAddPrescriptionData } from '../../utils/normalizer';
 import { setToLocalStorage } from '../../utils/localStorageHelpers';
 
 class CreatePrescription extends React.Component {
@@ -19,7 +19,8 @@ class CreatePrescription extends React.Component {
   };
 
   addPrescription = () => {
-    setToLocalStorage('prescriptions', JSON.stringify(normalizerPrescription(this.state.medicines)));
+    const prescriptions = normalizeAddPrescriptionData(this.state.medicines);
+    setToLocalStorage('prescriptions', JSON.stringify(prescriptions));
     this.setState({
       'isSavedPrescription': true
     }, () => {
