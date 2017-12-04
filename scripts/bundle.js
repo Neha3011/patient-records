@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "cc1ba1c1b8658a20c127"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "32afdb66603baa40f20c"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -1544,7 +1544,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Redirect", function() { return __WEBPACK_IMPORTED_MODULE_6__Redirect__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Route__ = __webpack_require__(35);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Route", function() { return __WEBPACK_IMPORTED_MODULE_7__Route__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Router__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Router__ = __webpack_require__(19);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Router", function() { return __WEBPACK_IMPORTED_MODULE_8__Router__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__StaticRouter__ = __webpack_require__(76);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "StaticRouter", function() { return __WEBPACK_IMPORTED_MODULE_9__StaticRouter__["a"]; });
@@ -1662,6 +1662,27 @@ var locationsAreEqual = function locationsAreEqual(a, b) {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var getFromLocalStorage = exports.getFromLocalStorage = function getFromLocalStorage(key) {
+  return window.localStorage.getItem(key);
+};
+
+var setToLocalStorage = exports.setToLocalStorage = function setToLocalStorage(key, value) {
+  window.localStorage.setItem(key, value);
+};
+
+ ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } /* eslint-disable camelcase, no-undef */ var webpackExports = typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__ : module.exports; /* eslint-enable camelcase, no-undef */ if (typeof webpackExports === 'function') { __REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/nehasingh/Projects/patient-records/src/utils/localStorageHelpers.js"); return; } /* eslint-disable no-restricted-syntax */ for (var key in webpackExports) { /* eslint-enable no-restricted-syntax */ if (!Object.prototype.hasOwnProperty.call(webpackExports, key)) { continue; } var namedExport = void 0; try { namedExport = webpackExports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "/Users/nehasingh/Projects/patient-records/src/utils/localStorageHelpers.js"); } } })();
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -1674,7 +1695,7 @@ var locationsAreEqual = function locationsAreEqual(a, b) {
 if (process.env.NODE_ENV !== 'production') {
   var invariant = __webpack_require__(7);
   var warning = __webpack_require__(11);
-  var ReactPropTypesSecret = __webpack_require__(15);
+  var ReactPropTypesSecret = __webpack_require__(16);
   var loggedTypeFailures = {};
 }
 
@@ -1725,7 +1746,7 @@ module.exports = checkPropTypes;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1744,7 +1765,7 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1828,7 +1849,7 @@ var locationsAreEqual = exports.locationsAreEqual = function locationsAreEqual(a
 };
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1919,18 +1940,18 @@ var createTransitionManager = function createTransitionManager() {
 exports.default = createTransitionManager;
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Router__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Router__ = __webpack_require__(20);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Router__["a" /* default */]);
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2049,7 +2070,7 @@ Router.childContextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Router);
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2126,7 +2147,7 @@ var matchPath = function matchPath(pathname) {
 /* harmony default export */ __webpack_exports__["a"] = (matchPath);
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2211,7 +2232,7 @@ var createTransitionManager = function createTransitionManager() {
 /* harmony default export */ __webpack_exports__["a"] = (createTransitionManager);
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -19303,27 +19324,6 @@ var createTransitionManager = function createTransitionManager() {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(87), __webpack_require__(88)(module)))
 
 /***/ }),
-/* 23 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var getFromLocalStorage = exports.getFromLocalStorage = function getFromLocalStorage(key) {
-  return window.localStorage.getItem(key);
-};
-
-var setToLocalStorage = exports.setToLocalStorage = function setToLocalStorage(key, value) {
-  window.localStorage.setItem(key, value);
-};
-
- ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } /* eslint-disable camelcase, no-undef */ var webpackExports = typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__ : module.exports; /* eslint-enable camelcase, no-undef */ if (typeof webpackExports === 'function') { __REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/nehasingh/Projects/patient-records/src/utils/localStorageHelpers.js"); return; } /* eslint-disable no-restricted-syntax */ for (var key in webpackExports) { /* eslint-enable no-restricted-syntax */ if (!Object.prototype.hasOwnProperty.call(webpackExports, key)) { continue; } var namedExport = void 0; try { namedExport = webpackExports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "/Users/nehasingh/Projects/patient-records/src/utils/localStorageHelpers.js"); } } })();
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ }),
 /* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19992,7 +19992,7 @@ Link.contextTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__matchPath__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__matchPath__ = __webpack_require__(21);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -20638,7 +20638,7 @@ var emptyObject = __webpack_require__(10);
 var invariant = __webpack_require__(7);
 var warning = __webpack_require__(11);
 var emptyFunction = __webpack_require__(5);
-var checkPropTypes = __webpack_require__(14);
+var checkPropTypes = __webpack_require__(15);
 
 // TODO: this is special because it gets imported during build.
 
@@ -22302,7 +22302,7 @@ var shallowEqual = __webpack_require__(28);
 var containsNode = __webpack_require__(29);
 var focusNode = __webpack_require__(30);
 var emptyObject = __webpack_require__(10);
-var checkPropTypes = __webpack_require__(14);
+var checkPropTypes = __webpack_require__(15);
 var hyphenateStyleName = __webpack_require__(52);
 var camelizeStyleName = __webpack_require__(54);
 
@@ -37839,7 +37839,7 @@ module.exports = camelize;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createBrowserHistory__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createBrowserHistory___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_history_createBrowserHistory__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(19);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -37912,8 +37912,8 @@ var invariant = __webpack_require__(7);
 var warning = __webpack_require__(11);
 var assign = __webpack_require__(6);
 
-var ReactPropTypesSecret = __webpack_require__(15);
-var checkPropTypes = __webpack_require__(14);
+var ReactPropTypesSecret = __webpack_require__(16);
+var checkPropTypes = __webpack_require__(15);
 
 module.exports = function(isValidElement, throwOnDirectAccess) {
   /* global Symbol */
@@ -38459,7 +38459,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 
 var emptyFunction = __webpack_require__(5);
 var invariant = __webpack_require__(7);
-var ReactPropTypesSecret = __webpack_require__(15);
+var ReactPropTypesSecret = __webpack_require__(16);
 
 module.exports = function() {
   function shim(props, propName, componentName, location, propFullName, secret) {
@@ -38529,11 +38529,11 @@ var _invariant = __webpack_require__(4);
 
 var _invariant2 = _interopRequireDefault(_invariant);
 
-var _LocationUtils = __webpack_require__(16);
+var _LocationUtils = __webpack_require__(17);
 
 var _PathUtils = __webpack_require__(8);
 
-var _createTransitionManager = __webpack_require__(17);
+var _createTransitionManager = __webpack_require__(18);
 
 var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 
@@ -38834,7 +38834,7 @@ exports.default = createBrowserHistory;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createHashHistory__ = __webpack_require__(61);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createHashHistory___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_history_createHashHistory__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(19);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -38906,11 +38906,11 @@ var _invariant = __webpack_require__(4);
 
 var _invariant2 = _interopRequireDefault(_invariant);
 
-var _LocationUtils = __webpack_require__(16);
+var _LocationUtils = __webpack_require__(17);
 
 var _PathUtils = __webpack_require__(8);
 
-var _createTransitionManager = __webpack_require__(17);
+var _createTransitionManager = __webpack_require__(18);
 
 var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 
@@ -39241,7 +39241,7 @@ exports.default = createHashHistory;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createMemoryHistory__ = __webpack_require__(64);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createMemoryHistory___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_history_createMemoryHistory__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(20);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -39314,9 +39314,9 @@ var _warning2 = _interopRequireDefault(_warning);
 
 var _PathUtils = __webpack_require__(8);
 
-var _LocationUtils = __webpack_require__(16);
+var _LocationUtils = __webpack_require__(17);
 
-var _createTransitionManager = __webpack_require__(17);
+var _createTransitionManager = __webpack_require__(18);
 
 var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 
@@ -40252,7 +40252,7 @@ Redirect.contextTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PathUtils__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createTransitionManager__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createTransitionManager__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__DOMUtils__ = __webpack_require__(37);
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
@@ -40556,7 +40556,7 @@ var createBrowserHistory = function createBrowserHistory() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PathUtils__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createTransitionManager__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createTransitionManager__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__DOMUtils__ = __webpack_require__(37);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -40875,7 +40875,7 @@ var createHashHistory = function createHashHistory() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__PathUtils__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__createTransitionManager__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__createTransitionManager__ = __webpack_require__(22);
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -41060,7 +41060,7 @@ var createMemoryHistory = function createMemoryHistory() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_history_PathUtils__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_history_PathUtils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_history_PathUtils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Router__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Router__ = __webpack_require__(20);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -41252,7 +41252,7 @@ StaticRouter.childContextTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_invariant__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__matchPath__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__matchPath__ = __webpack_require__(21);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -41338,7 +41338,7 @@ Switch.propTypes = {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_matchPath__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_matchPath__ = __webpack_require__(21);
 // Written in this round about way for babel-transform-imports
 
 
@@ -41604,6 +41604,10 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+/**
+ * Describes the Patient parent component
+ * */
+
 var Patient = function (_React$Component) {
   _inherits(Patient, _React$Component);
 
@@ -41695,13 +41699,13 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _lodash = __webpack_require__(22);
+var _lodash = __webpack_require__(23);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
 var _normalizer = __webpack_require__(89);
 
-var _localStorageHelpers = __webpack_require__(23);
+var _localStorageHelpers = __webpack_require__(14);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -41735,7 +41739,8 @@ var CreatePrescription = function (_React$Component) {
         medicines: medicines
       });
     }, _this.addPrescription = function () {
-      (0, _localStorageHelpers.setToLocalStorage)('prescriptions', JSON.stringify((0, _normalizer.normalizerPrescription)(_this.state.medicines)));
+      var prescriptions = (0, _normalizer.normalizeAddPrescriptionData)(_this.state.medicines);
+      (0, _localStorageHelpers.setToLocalStorage)('prescriptions', JSON.stringify(prescriptions));
       _this.setState({
         'isSavedPrescription': true
       }, function () {
@@ -41945,27 +41950,51 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.normalizerPrescription = normalizerPrescription;
+exports.normalizeAddPrescriptionData = normalizeAddPrescriptionData;
 
 var _isEmpty = __webpack_require__(90);
 
 var _isEmpty2 = _interopRequireDefault(_isEmpty);
 
+var _localStorageHelpers = __webpack_require__(14);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function normalizerPrescription(prescriptionData) {
+/**
+ * Normalizer: normalizerPrescription
+ * This function will take medicines array as input
+ * and return a normalized prescription as an output
+ * */
+
+function normalizerPrescription(prescriptionData, lastIndex) {
   var medicines = prescriptionData.filter(function (prescription) {
     return !(0, _isEmpty2.default)(prescription);
   });
 
   return {
-    'prescriptions': [{
-      'id': '00000001',
-      'doctorRequested': false,
-      'pharmacistRequested': false,
-      'doctorAllowed': false,
-      'pharmacistAllowed': false,
-      medicines: medicines
-    }]
+    'id': lastIndex + 1,
+    'doctorRequested': false,
+    'pharmacistRequested': false,
+    'doctorAllowed': false,
+    'pharmacistAllowed': false,
+    medicines: medicines
+  };
+}
+
+/**
+ * Normalizer: normalizeAddPrescriptionData
+ * This function will update prescription data
+ * */
+
+function normalizeAddPrescriptionData(medicines) {
+  var storagePrescription = JSON.parse((0, _localStorageHelpers.getFromLocalStorage)('prescriptions'));
+  var prevPrescription = storagePrescription ? storagePrescription.prescriptions : [];
+  var prescriptionLength = prevPrescription.length - 1;
+  var lastIndex = prescriptionLength !== -1 ? prevPrescription[prescriptionLength].id : 0;
+  var newPrescription = normalizerPrescription(medicines, lastIndex);
+  prevPrescription.push(newPrescription);
+  return {
+    'prescriptions': prevPrescription
   };
 }
 
@@ -42074,7 +42103,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _lodash = __webpack_require__(22);
+var _lodash = __webpack_require__(23);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
@@ -42082,7 +42111,7 @@ var _Popup = __webpack_require__(39);
 
 var _Popup2 = _interopRequireDefault(_Popup);
 
-var _localStorageHelpers = __webpack_require__(23);
+var _localStorageHelpers = __webpack_require__(14);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -42110,17 +42139,21 @@ var ManagePrescription = function (_React$Component) {
       'viewPrescription': false,
       'allowPrescriptionModal': false,
       'userType': '',
-      'prescriptions': []
-    }, _this.toggleViewPrescription = function () {
+      'prescriptions': [],
+      'selectedPrescription': []
+    }, _this.toggleViewPrescription = function (selectedPrescription) {
       _this.setState({
-        'viewPrescription': !_this.state.viewPrescription
+        'viewPrescription': !_this.state.viewPrescription,
+        selectedPrescription: selectedPrescription
       });
     }, _this.toggleAllowPrescription = function () {
       var userType = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+      var selectedPrescription = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
 
       _this.setState({
         'allowPrescriptionModal': !_this.state.allowPrescriptionModal,
-        userType: userType
+        userType: userType,
+        selectedPrescription: selectedPrescription
       });
     }, _this.fetchPrescriptionData = function () {
       _this.setState({
@@ -42149,7 +42182,7 @@ var ManagePrescription = function (_React$Component) {
       (0, _localStorageHelpers.setToLocalStorage)('prescriptions', JSON.stringify({
         'prescriptions': prescriptions
       }));
-    }, _this.renderAllowPrescription = function (type, prescriptionId) {
+    }, _this.renderAllowPrescription = function () {
       return _react2.default.createElement(
         _Popup2.default,
         {
@@ -42159,7 +42192,7 @@ var ManagePrescription = function (_React$Component) {
         _react2.default.createElement(
           'div',
           { className: 'popup__header' },
-          'Are you sure, you want to allow ' + type + ' to view your prescription?'
+          'Are you sure, you want to allow ' + _this.state.userType + ' to view your prescription?'
         ),
         _react2.default.createElement(
           'div',
@@ -42176,13 +42209,14 @@ var ManagePrescription = function (_React$Component) {
             'div',
             {
               className: 'popup__action btn-green',
-              onClick: _this.allowPrescription.bind(_this, type, prescriptionId)
+              onClick: _this.allowPrescription.bind(_this, _this.state.userType, _this.state.selectedPrescription.id)
             },
             'ALLOW'
           )
         )
       );
-    }, _this.renderModal = function (prescription, prescriptionId) {
+    }, _this.renderModal = function () {
+      var prescription = _this.state.selectedPrescription;
       return _react2.default.createElement(
         _Popup2.default,
         {
@@ -42215,7 +42249,7 @@ var ManagePrescription = function (_React$Component) {
               prescription && prescription.medicines.map(function (data) {
                 return _react2.default.createElement(
                   'tr',
-                  { className: 'prescription__row', key: prescriptionId + '\'\'' + data.name },
+                  { className: 'prescription__row', key: prescription.id + '\'\'' + data.name },
                   _react2.default.createElement(
                     'td',
                     null,
@@ -42301,12 +42335,12 @@ var ManagePrescription = function (_React$Component) {
                   null,
                   _react2.default.createElement(
                     'a',
-                    { onClick: _this2.toggleViewPrescription },
+                    { onClick: _this2.toggleViewPrescription.bind(_this2, prescription) },
                     'View'
                   ),
                   function () {
                     if (_this2.state.viewPrescription) {
-                      return _this2.renderModal(prescription, prescription.id);
+                      return _this2.renderModal();
                     }
                   }()
                 ),
@@ -42317,16 +42351,18 @@ var ManagePrescription = function (_React$Component) {
                     if (prescription.doctorRequested) {
                       return _react2.default.createElement(
                         'a',
-                        { onClick: _this2.toggleAllowPrescription.bind(_this2, 'doctor') },
+                        { onClick: _this2.toggleAllowPrescription.bind(_this2, 'doctor', prescription) },
                         'Allow'
                       );
+                    } else if (prescription.doctorAllowed) {
+                      return 'Request Granted';
                     } else {
                       return '--';
                     }
                   }(),
                   function () {
                     if (_this2.state.allowPrescriptionModal) {
-                      return _this2.renderAllowPrescription(_this2.state.userType, prescription.id);
+                      return _this2.renderAllowPrescription();
                     }
                   }()
                 ),
@@ -42337,9 +42373,11 @@ var ManagePrescription = function (_React$Component) {
                     if (prescription.pharmacistRequested) {
                       return _react2.default.createElement(
                         'a',
-                        { onClick: _this2.toggleAllowPrescription.bind(_this2, 'pharmacist') },
+                        { onClick: _this2.toggleAllowPrescription.bind(_this2, 'pharmacist', prescription) },
                         'Allow'
                       );
+                    } else if (prescription.pharmacistAllowed) {
+                      return 'Request Granted';
                     } else {
                       return '--';
                     }
@@ -43314,7 +43352,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _lodash = __webpack_require__(22);
+var _lodash = __webpack_require__(23);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
@@ -43322,7 +43360,7 @@ var _Popup = __webpack_require__(39);
 
 var _Popup2 = _interopRequireDefault(_Popup);
 
-var _localStorageHelpers = __webpack_require__(23);
+var _localStorageHelpers = __webpack_require__(14);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -43332,6 +43370,9 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+/**
+ * Describes the Doctor or Pharmacist component
+ * */
 var Doctor = function (_React$Component) {
   _inherits(Doctor, _React$Component);
 
@@ -43350,18 +43391,23 @@ var Doctor = function (_React$Component) {
       'viewPrescription': false,
       'allowPrescriptionModal': false,
       'prescriptions': [],
-      'userType': ''
+      'userType': '',
+      'selectedPrescription': []
     }, _this.fetchPrescriptionData = function () {
       _this.setState({
         'prescriptions': JSON.parse((0, _localStorageHelpers.getFromLocalStorage)('prescriptions')).prescriptions
       });
     }, _this.toggleViewPrescription = function () {
+      var selectedPrescription = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+
       _this.setState({
-        'viewPrescription': !_this.state.viewPrescription
+        'viewPrescription': !_this.state.viewPrescription,
+        selectedPrescription: selectedPrescription
       });
-    }, _this.toggleRequestPrescription = function () {
+    }, _this.toggleRequestPrescription = function (selectedPrescription) {
       _this.setState({
-        'allowPrescriptionModal': !_this.state.allowPrescriptionModal
+        'allowPrescriptionModal': !_this.state.allowPrescriptionModal,
+        selectedPrescription: selectedPrescription
       });
     }, _this.requestPrescription = function (prescriptionId) {
       var prescriptions = _lodash2.default.clone(_this.state.prescriptions);
@@ -43385,7 +43431,7 @@ var Doctor = function (_React$Component) {
       (0, _localStorageHelpers.setToLocalStorage)('prescriptions', JSON.stringify({
         'prescriptions': prescriptions
       }));
-    }, _this.renderAllowPrescription = function (type, prescriptionId) {
+    }, _this.renderRequestPrescription = function () {
       return _react2.default.createElement(
         _Popup2.default,
         {
@@ -43395,7 +43441,7 @@ var Doctor = function (_React$Component) {
         _react2.default.createElement(
           'div',
           { className: 'popup__header' },
-          'Are you sure, you want to request to access prescription: ' + type + ' ?'
+          'Are you sure, you want to request to access prescription: ' + _this.state.selectedPrescription.id + ' ?'
         ),
         _react2.default.createElement(
           'div',
@@ -43412,13 +43458,14 @@ var Doctor = function (_React$Component) {
             'span',
             {
               className: 'popup__action btn-green',
-              onClick: _this.requestPrescription.bind(_this, type, prescriptionId)
+              onClick: _this.requestPrescription.bind(_this, _this.state.selectedPrescription.id)
             },
             'REQUEST'
           )
         )
       );
-    }, _this.renderModal = function (prescription, prescriptionId) {
+    }, _this.renderModal = function () {
+      var prescription = _this.state.selectedPrescription;
       return _react2.default.createElement(
         _Popup2.default,
         {
@@ -43451,7 +43498,7 @@ var Doctor = function (_React$Component) {
               prescription && prescription.medicines.map(function (data) {
                 return _react2.default.createElement(
                   'tr',
-                  { className: 'prescription__row', key: prescriptionId + '\'\'' + data.name },
+                  { className: 'prescription__row', key: prescription.id + '\'\'' + data.name },
                   _react2.default.createElement(
                     'td',
                     null,
@@ -43533,7 +43580,7 @@ var Doctor = function (_React$Component) {
                     if (_this2.state.userType === 'doctor' && prescription.doctorAllowed || _this2.state.userType === 'pharmacist' && prescription.pharmacistAllowed) {
                       return _react2.default.createElement(
                         'a',
-                        { onClick: _this2.toggleViewPrescription },
+                        { onClick: _this2.toggleViewPrescription.bind(_this2, prescription) },
                         'View'
                       );
                     } else if (_this2.state.userType === 'doctor' && prescription.doctorRequested || _this2.state.userType === 'pharmacist' && prescription.pharmacistRequested) {
@@ -43545,16 +43592,16 @@ var Doctor = function (_React$Component) {
                     } else {
                       return _react2.default.createElement(
                         'a',
-                        { onClick: _this2.toggleRequestPrescription },
+                        { onClick: _this2.toggleRequestPrescription.bind(_this2, prescription) },
                         'Request Access'
                       );
                     }
                   }(),
                   function () {
                     if (_this2.state.viewPrescription) {
-                      return _this2.renderModal(prescription, prescription.id);
+                      return _this2.renderModal();
                     } else if (_this2.state.allowPrescriptionModal) {
-                      return _this2.renderAllowPrescription(prescription.id);
+                      return _this2.renderRequestPrescription();
                     }
                   }()
                 )
@@ -43645,6 +43692,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+/**
+ * Describes the Login component
+ * */
 
 var Login = function (_React$Component) {
   _inherits(Login, _React$Component);
